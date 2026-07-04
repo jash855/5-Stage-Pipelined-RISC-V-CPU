@@ -1,0 +1,488 @@
+$date
+	Sun Jun 07 12:31:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module cpu_top_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$scope module dut $end
+$var wire 1 # branch_taken $end
+$var wire 1 ! clk $end
+$var wire 1 " reset $end
+$var wire 1 $ zero $end
+$var wire 32 % write_back_data [31:0] $end
+$var wire 5 & rs2 [4:0] $end
+$var wire 5 ' rs1 [4:0] $end
+$var wire 32 ( read_data2 [31:0] $end
+$var wire 32 ) read_data1 [31:0] $end
+$var wire 5 * rd [4:0] $end
+$var wire 32 + pc_plus4 [31:0] $end
+$var wire 32 , pc [31:0] $end
+$var wire 7 - opcode [6:0] $end
+$var wire 32 . next_pc [31:0] $end
+$var wire 32 / memory_data [31:0] $end
+$var wire 32 0 jal_target [31:0] $end
+$var wire 32 1 instruction [31:0] $end
+$var wire 32 2 imm_out [31:0] $end
+$var wire 7 3 funct7 [6:0] $end
+$var wire 3 4 funct3 [2:0] $end
+$var wire 32 5 branch_target [31:0] $end
+$var wire 32 6 alu_result [31:0] $end
+$var wire 32 7 alu_operand_b [31:0] $end
+$var wire 3 8 alu_control [2:0] $end
+$var wire 1 9 RegWrite $end
+$var wire 1 : MemWrite $end
+$var wire 1 ; MemToReg $end
+$var wire 1 < MemRead $end
+$var wire 1 = Jump $end
+$var wire 1 > Branch $end
+$var wire 1 ? ALUSrc $end
+$var wire 2 @ ALUOp [1:0] $end
+$scope module alu_ctrl $end
+$var wire 3 A funct3 [2:0] $end
+$var wire 7 B funct7 [6:0] $end
+$var wire 2 C ALUOp [1:0] $end
+$var reg 3 D alu_control [2:0] $end
+$upscope $end
+$scope module alu_inst $end
+$var wire 3 E alu_control [2:0] $end
+$var wire 32 F b [31:0] $end
+$var wire 1 $ zero $end
+$var wire 32 G a [31:0] $end
+$var reg 32 H result [31:0] $end
+$upscope $end
+$scope module ctrl $end
+$var wire 7 I opcode [6:0] $end
+$var reg 2 J ALUOp [1:0] $end
+$var reg 1 ? ALUSrc $end
+$var reg 1 > Branch $end
+$var reg 1 = Jump $end
+$var reg 1 < MemRead $end
+$var reg 1 ; MemToReg $end
+$var reg 1 : MemWrite $end
+$var reg 1 9 RegWrite $end
+$upscope $end
+$scope module dmem $end
+$var wire 32 K address [31:0] $end
+$var wire 1 ! clk $end
+$var wire 1 < mem_read $end
+$var wire 1 : mem_write $end
+$var wire 32 L write_data [31:0] $end
+$var wire 32 M read_data [31:0] $end
+$var integer 32 N i [31:0] $end
+$upscope $end
+$scope module imem $end
+$var wire 32 O instruction [31:0] $end
+$var wire 32 P address [31:0] $end
+$var integer 32 Q i [31:0] $end
+$upscope $end
+$scope module immgen $end
+$var wire 32 R instruction [31:0] $end
+$var reg 32 S imm_out [31:0] $end
+$upscope $end
+$scope module pc_inst $end
+$var wire 1 ! clk $end
+$var wire 32 T next_pc [31:0] $end
+$var wire 1 " reset $end
+$var reg 32 U pc_out [31:0] $end
+$upscope $end
+$scope module rf $end
+$var wire 1 ! clk $end
+$var wire 5 V rd [4:0] $end
+$var wire 1 9 reg_write $end
+$var wire 5 W rs1 [4:0] $end
+$var wire 5 X rs2 [4:0] $end
+$var wire 32 Y write_data [31:0] $end
+$var wire 32 Z read_data2 [31:0] $end
+$var wire 32 [ read_data1 [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 [
+bx Z
+b101 Y
+b101 X
+b0 W
+b10 V
+b0 U
+b100 T
+b101 S
+b10100000000000100010011 R
+b100000000 Q
+b0 P
+b10100000000000100010011 O
+b100000000 N
+b0 M
+bx L
+b101 K
+b0 J
+b10011 I
+b101 H
+b0 G
+b101 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 A
+b0 @
+1?
+0>
+0=
+0<
+0;
+0:
+19
+b0 8
+b101 7
+b101 6
+b101 5
+b0 4
+b0 3
+b101 2
+b10100000000000100010011 1
+b101 0
+b0 /
+b100 .
+b10011 -
+b0 ,
+b100 +
+b10 *
+b0 )
+bx (
+b0 '
+b101 &
+b101 %
+0$
+0#
+1"
+0!
+$end
+#5000
+1!
+#10000
+0!
+0"
+#15000
+x$
+bx 6
+bx H
+bx K
+b1000 %
+b1000 Y
+bx 7
+bx F
+1=
+0?
+19
+b1000 2
+b1000 S
+b1000 &
+b1000 X
+b1 *
+b1 V
+b1101111 -
+b1101111 I
+b1100 .
+b1100 T
+b100000000000000011101111 1
+b100000000000000011101111 O
+b100000000000000011101111 R
+b1100 0
+b1100 5
+b1000 +
+b100 ,
+b100 P
+b100 U
+1!
+#20000
+0!
+#25000
+0$
+b1100011 6
+b1100011 H
+b1100011 K
+b1100011 7
+b1100011 F
+1?
+0=
+19
+b1100011 2
+b1100011 S
+b11 3
+b11 B
+b11 &
+b11 X
+b100 *
+b100 V
+b10011 -
+b10011 I
+b110001100000000001000010011 1
+b110001100000000001000010011 O
+b110001100000000001000010011 R
+b10000 .
+b10000 T
+b1100011 %
+b1100011 Y
+b1101111 0
+b1101111 5
+b10000 +
+b1100 ,
+b1100 P
+b1100 U
+1!
+#30000
+0!
+#35000
+b0 %
+b0 Y
+1$
+b0 6
+b0 H
+b0 K
+b0 7
+b0 F
+b0 (
+b0 L
+b0 Z
+0?
+09
+b0 2
+b0 S
+b0 3
+b0 B
+b0 &
+b0 X
+b0 *
+b0 V
+b0 -
+b0 I
+b10100 .
+b10100 T
+b0 1
+b0 O
+b0 R
+b10000 0
+b10000 5
+b10100 +
+b10000 ,
+b10000 P
+b10000 U
+1!
+#40000
+0!
+#45000
+b11000 .
+b11000 T
+b10100 0
+b10100 5
+b11000 +
+b10100 ,
+b10100 P
+b10100 U
+1!
+#50000
+0!
+#55000
+b11100 .
+b11100 T
+b11000 0
+b11000 5
+b11100 +
+b11000 ,
+b11000 P
+b11000 U
+1!
+#60000
+0!
+#65000
+b100000 .
+b100000 T
+b11100 0
+b11100 5
+b100000 +
+b11100 ,
+b11100 P
+b11100 U
+1!
+#70000
+0!
+#75000
+b100100 .
+b100100 T
+b100000 0
+b100000 5
+b100100 +
+b100000 ,
+b100000 P
+b100000 U
+1!
+#80000
+0!
+#85000
+b101000 .
+b101000 T
+b100100 0
+b100100 5
+b101000 +
+b100100 ,
+b100100 P
+b100100 U
+1!
+#90000
+0!
+#95000
+b101100 .
+b101100 T
+b101000 0
+b101000 5
+b101100 +
+b101000 ,
+b101000 P
+b101000 U
+1!
+#100000
+0!
+#105000
+b110000 .
+b110000 T
+b101100 0
+b101100 5
+b110000 +
+b101100 ,
+b101100 P
+b101100 U
+1!
+#110000
+0!
+#115000
+b110100 .
+b110100 T
+b110000 0
+b110000 5
+b110100 +
+b110000 ,
+b110000 P
+b110000 U
+1!
+#120000
+0!
+#125000
+b111000 .
+b111000 T
+b110100 0
+b110100 5
+b111000 +
+b110100 ,
+b110100 P
+b110100 U
+1!
+#130000
+0!
+#135000
+b111100 .
+b111100 T
+b111000 0
+b111000 5
+b111100 +
+b111000 ,
+b111000 P
+b111000 U
+1!
+#140000
+0!
+#145000
+b1000000 .
+b1000000 T
+b111100 0
+b111100 5
+b1000000 +
+b111100 ,
+b111100 P
+b111100 U
+1!
+#150000
+0!
+#155000
+b1000100 .
+b1000100 T
+b1000000 0
+b1000000 5
+b1000100 +
+b1000000 ,
+b1000000 P
+b1000000 U
+1!
+#160000
+0!
+#165000
+b1001000 .
+b1001000 T
+b1000100 0
+b1000100 5
+b1001000 +
+b1000100 ,
+b1000100 P
+b1000100 U
+1!
+#170000
+0!
+#175000
+b1001100 .
+b1001100 T
+b1001000 0
+b1001000 5
+b1001100 +
+b1001000 ,
+b1001000 P
+b1001000 U
+1!
+#180000
+0!
+#185000
+b1010000 .
+b1010000 T
+b1001100 0
+b1001100 5
+b1010000 +
+b1001100 ,
+b1001100 P
+b1001100 U
+1!
+#190000
+0!
+#195000
+b1010100 .
+b1010100 T
+b1010000 0
+b1010000 5
+b1010100 +
+b1010000 ,
+b1010000 P
+b1010000 U
+1!
+#200000
+0!
+#205000
+b1011000 .
+b1011000 T
+b1010100 0
+b1010100 5
+b1011000 +
+b1010100 ,
+b1010100 P
+b1010100 U
+1!
+#210000
+0!
